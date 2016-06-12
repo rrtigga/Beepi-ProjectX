@@ -2112,7 +2112,7 @@
 }
 
 .grey-text.text-darken-4 {
-  color: #212121 !important;
+  color: white !important;
 }
 
 .shades.black {
@@ -4543,7 +4543,7 @@ small {
 }
 
 .card .card-title {
-  font-size: 24px;
+  font-size: 16px;
   font-weight: 400;
 }
 
@@ -4646,15 +4646,17 @@ small {
 }
 
 .card .card-reveal {
-  padding: 20px;
-  position: absolute;
-  background-color: #fff;
-  width: 100%;
-  overflow-y: auto;
-  top: 100%;
-  height: 100%;
-  z-index: 3;
-  display: none;
+    padding: 20px;
+    position: absolute;
+    background-color: #444;
+    width: 100%;
+    color: white;
+    opacity: 0.8;
+    overflow-y: auto;
+    top: 100%;
+    height: 100%;
+    z-index: 3;
+    display: none;
 }
 
 .card .card-reveal .card-title {
