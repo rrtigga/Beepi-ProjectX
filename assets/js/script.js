@@ -1802,11 +1802,26 @@ angular.module('appTest', [])
 
 			$scope.items2 = $scope.items;
     
-		    $scope.$watch('search', function(val)
-		    { 
+		    $scope.$watch('search', function(val) { 
 		        $scope.items = $filter('filter')($scope.items2, val);
 		    });
 
 
+		    $scope.lower_price_bound = 0;
+  			$scope.upper_price_bound = 100000;
 
+	        $scope.priceRange = function(item) {
+	        	var before_lowerBound = document.getElementById('lowerVal').innerHTML;
+	        	var lowerBound = before_lowerBound.substring(1);
+
+	        	var before_upperBound = document.getElementById('upperVal').innerHTML;
+	        	var upperBound = before_upperBound.substring(1);
+
+	        	var price = item['price'];
+	        	console.log(lowerBound);
+				console.log(upperBound);
+
+	        	return (price>=$scope.lower_price_bound && price <= $scope.upper_price_bound);
+	        	
+			  };
 		  })
